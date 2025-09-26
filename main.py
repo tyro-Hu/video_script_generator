@@ -7,6 +7,7 @@ st.title("🎬视频脚本生成器")
 with st.sidebar:
     deepseek_api_key = st.text_input("请输入你的DeepSeek API密钥", type="password")
     st.markdown("[获取DeepSeek API密钥](https://platform.deepseek.com/api_keys)")
+    st.write("测试密钥：sk-e24ba93f8f204f34a2ade604b8ebecf0")
 
 subject = st.text_input("💡请输入视频的主题")
 video_length = st.number_input("🕒请输入视频的大致时长（单位：分钟）", min_value=0.1, step=0.1, value=1.0)
@@ -41,3 +42,4 @@ if submit:
     st.write(script)
     with st.expander("📚维基百科搜索结果👀"):
         st.info(wiki_result)
+
